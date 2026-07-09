@@ -1,0 +1,36 @@
+/* join.css */
+body {background-color: #222;}
+#wrap {
+    border: 2px solid pink;
+    margin: 0 auto;
+    width: 420px;
+    padding-top: 100px;
+}
+#wrap main {}
+#wrap main h1 {
+    width: 100px;
+    margin: 0 auto;
+}
+#wrap main h1 img {width:100%}
+#wrap main .tab_menu {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    gap: 60px;
+    margin: 24px 0 44px;
+}
+#wrap main .tab_menu .active {
+    border-bottom: 2px solid #1ED760;
+}
+#wrap main .tab_menu .sign_in {
+    color: #fff;
+    font-family: 'Noto Sans KR';
+    font-size: 1em;
+    font-weight: 500;
+}
+#wrap main .tab_menu .sign_up {
+    color: #fff;
+    font-family: 'Noto Sans KR';
+    font-size: 1em;
+    font-weight: 500;
+}

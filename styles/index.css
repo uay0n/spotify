@@ -1,0 +1,18 @@
+/* index.css */
+header {
+    background-color: #111;
+    height: 80px;
+    display: flex; flex-flow: row nowrap; /* 한줄에 정렬/ 수평로 줄바꿈 없음 */
+    justify-content: space-between; /* 일정한 간격으로 수평 정렬 */
+    align-items: center; /* 가운데정렬 */
+    padding: 0px 20px; /* 좌우패딩 주기 */
+}
+header * {color: #fff;}
+header h1 {width: 32px;} /* 세로 사이즈 32px */
+header h1 a img {width: 100%;} /* 부모크기의 맞춰라 */
+header form {
+    display: flex; flex-flow: row nowrap;
+}
+header .snd {
+    display: flex; flex-flow: row nowrap; gap: 20px;
+}

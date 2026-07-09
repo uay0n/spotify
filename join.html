@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title>Join | spotity</title>
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/join.css">
+    <script src="./scripts/join.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <main>
+            <h1><a href="./index.html"><img src="./images/logo.png" alt="스포티파이"></a></h1>
+            <div class="tab_menu">
+                <a href="./login.html" class="sign_in">SIGN IN</a>
+                <a href="./join.html" class="active sign_up">SIGN UP</a>
+            </div>
+            <form action="#" method="post" name="jion_frm"><!-- form:post -->
+                <fieldset class="email_join"><!-- fieldset*2>legend -->
+                    <legend>이메일주소입력창</legend>
+                    <h2>이메일주소</h2>
+                    <p><input type="text" name="user_email" id="user_email" autofocus placeholder="name@naver.com"></p>
+                    <!-- p 묶은 이유? input이 인라인이라 블록하고 형제가 될 수 없기 때문 -->
+                    <!-- type=email, type=text 모두 맞음. 좀더 의미적으로 연관된 대상선택을 권장함. -->
+                    <!-- autofocus 속성은 html 한페이지당 딱 한번만 사용하기 -->
+                    <p><button type="button" id="email_next_btn">다음</button></p>
+                </fieldset>
+                <fieldset class="or_join">
+                    <legend>구글,애플가입창</legend>
+                    <p>또는</p>
+                    <a href="http://google.com/login" class="goole">Google로 가입하기</a>
+                    <!-- p+a가 될 수 있는 이유는? a는 html에선 블록으로 처리 가능, css에선 인라인취급 -->
+                    <!-- 외부 업체는 절대경로 https://로 연결하기 -->
+                    <a href="http://apple.com/login" class="apple">Apple로 가입하기</a>
+                </fieldset>
+                <fieldset>
+                </form>
+                <!-- 아래 p와a는 왜 form태그 밖인가? 서버전공 목적이 아닌 단순 이동링크이기 때문. -->
+                <p>이미 계정이 있나요?</p>
+                <a href="./login.html" class="login_link">로그인</a>
+        </main>
+    </div>
+</body>
+</html>

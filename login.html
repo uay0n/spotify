@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title>login | spotity</title>
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/login.css">
+    <script src="./scripts/login.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <main>
+            <h1><a href="./index.html"><img src="./images/logo.png" alt="스포티파이"></a></h1>
+            <div class="tab_menu">
+                <a href="./login.html" class="active sign_in">SIGN IN</a>
+                <a href="./join.html" class="sign_up">SIGN UP</a>
+            </div>
+            <form action="#" method="post" name="login_frm"><!-- form:post 보안이 필요한 폼 서버 -->
+                <fieldset class="id_pw_g"><!-- 로그인을 위한 입력그룹 뜻 fieldset == div -->
+                    <legend>아이디, 비밀번호 입력그룹</legend><!-- 자식 수로 세지 않기, 디자인에서 보이지 않는 의미적인 제목 용도 -->
+                    <input type="text" name="user_id" id="user_id" placeholder="아이디를 입력하세요">
+                    <!-- (위) text 한줄 글자 입력칸(아이디, 이름, 닉네임, 주소, 추천인, 주민등록번호앞, 한줄평) -->
+                    <input type="password" name="user_pw" id="user_pw" placeholder="비밀번호를 입력하세요">
+                    <!-- (위) password 보안 글자 입력칸(비밀번호, 비밀번호재입력, 주민뒷자리, 게시판비밀글) -->
+                </fieldset>
+                <fieldset class="login_y_g">
+                    <legend>로그인상태유지 그룹</legend>
+                    <button type="button">로그인 상태 유지</button>
+                </fieldset>
+                <fieldset class="btn_search_g">
+                    <legend>로그인, 찾기그룹</legend>
+                    <button type="button" id="login_btn">LOGIN</button> <!-- button:button -->
+                    <!-- (위)type=button (범용(모든기능가능), 자바스크립트 후처리로 모든 기능가능) -->
+                    <a href="#" class="search_pw">비밀번호 찾기</a>
+                </fieldset>
+            </form>
+        </main>
+    </div>
+</body>
+</html>
