@@ -20,8 +20,25 @@ body {background-color: #222;}
     margin: 24px 0 44px;
 }
 #wrap main .tab_menu .active {
-    border-bottom: 2px solid #1ED760;
+    /* border-bottom: 2px solid #1ED760; */
+    position: relative;
 }
+#wrap main .tab_menu .active::after {
+    content: ''; display: block;
+    width: 80px; height: 5px;
+    background:rgba(255, 255, 255, 0.405);
+    position: absolute; right: 3px; bottom: 0;
+    z-index: -1;
+
+}
+#wrap main .tab_menu .active::before {
+    content: ''; display: block;
+    width: 65px; height: 10px;
+    background:rgba(204, 255, 0, 0.479);
+    position: absolute; left: 0px; top: 5px;
+    z-index: -1;
+}
+#wrap main .tab_menu .active::before {}
 #wrap main .tab_menu .sign_in {
     color: #fff;
     font-family: 'Noto Sans KR';
@@ -33,4 +50,47 @@ body {background-color: #222;}
     font-family: 'Noto Sans KR';
     font-size: 1em;
     font-weight: 500;
+}
+/* ----------------------------가입 양식 */
+
+/* -------------------------------------이메일 주소 */
+#wrap main form[name*=join] .email_join {
+    display: flex; flex-flow: column nowrap;
+    gap: 10px;
+}
+#wrap main form[name*=join] .email_join h2 {
+    color: #fff;
+}
+#wrap main form[name*=join] .email_join p {}
+#wrap main form[name*=join] .email_join p #user_email {
+    width: 420px; height: 40px;
+    background-color: #2222;
+    border: 1px solid #fff;
+    border-radius: 5px;
+}
+#wrap main form[name*=join] .email_join p #user_email::placeholder {color: #fff;}
+#wrap main form[name*=join] .email_join p #email_next_btn {
+    width: 420px; height: 40px;
+    background-color: #1ED760;
+    border-radius: 23px;
+    font-family: 'Noto Sans KR';
+    color: #fff;
+    font-size: 1em; font-weight: 500;
+}
+/* -------------------------------------구글, 애플로 가입하기 */
+#wrap main form[name*=join] .or_join .goole{
+    background-image: url(../images/google.svg);
+}
+#wrap main form[name*=join] .or_join .apple{
+    background-image: url(../images/apple.svg);
+}
+#wrap main form[name*=join] .or_join a[href*=http]{
+    background-repeat: no-repeat;
+    border: 1px solid #fff; color: #fff;
+    border-radius: 20px;
+    display: block; line-height: 40px; /* 가운데로 오게 하기 */
+    text-align: center;
+    background-position: 15px center;
+    margin-bottom: 10px;
+    
 }

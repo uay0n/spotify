@@ -20,10 +20,26 @@ body {background-color: #222;}
     justify-content: center;
     gap: 60px;
 }
-#wrap main .tab_menu .active {
-    border-bottom: 2px solid #1ED760;
+#wrap main .tab_menu .active::after {
+    content: ''; display:block;
+    width: 40px; height: 2px;
+    background-color: yellow;
+    position: absolute; left: 0; bottom: -10px;
+
 }
-#wrap main .tab_menu .sign_in {
+#wrap main .tab_menu .active::before {
+    content: ''; display:block;
+    width: 15px; height: 2px;
+    background-color: rgb(72, 255, 0);
+    position: absolute; right: 0; bottom: -10px;
+}
+#wrap main .tab_menu .active {
+    position: relative;/* after, before의 기준 부모 */
+    /* border-bottom: 10px solid #1ED760; */
+}
+/* 활성화 디자인 시 요소의 크기와 관계없이 다양한 크기와 위치 디자인을 하고 싶은 때 border속성은 무조건 요소의 크기와 동일하게 만들어지므로 다른 방법을 사용해야한다. */
+/* ----------------------내가 연습한 부분 */
+/* #wrap main .tab_menu .sign_in {
     color: #fff;
     font-weight: 500;
     font-family: 'Noto Sans KR';
@@ -37,6 +53,7 @@ body {background-color: #222;}
 }
 #wrap main form .id_pw_g {}
 #wrap main form .id_pw_g #user_id {
+    font-family: 'Pretendard';
     display: block;
     margin-bottom: 6px;
     width: 420px; height: 50px;
@@ -44,8 +61,49 @@ body {background-color: #222;}
     border-radius: 23px;
 }
 #wrap main form .id_pw_g #user_pw {
+    font-family: 'Pretendard';
     display: block;
     width: 420px; height: 50px;
     padding-left: 30px;
     border-radius: 23px;
+} */
+/* ----------------------내가 연습한 부분 */
+/* 태그[속성=값] 속성선택자, form, input, button등에 주로 사용 */
+#wrap form[name^=lo] {
+    background-color: brown;
+    display: flex; flex-flow: column nowrap;
+    gap: 24px;
+}
+#wrap form[name^=login] fieldset[class*=g] {
+    display: flex; flex-flow: column nowrap;
+    /* align-items: center; */
+    text-align: center;
+}
+#wrap form[name^=lo] fieldset[class*=g] input[name^=user] {
+    font-family: 'Pretendard';
+    width: 100%; height: 46px;
+    padding: 0 20px;
+    border-radius: 23px;
+    margin-bottom: 12px;
+}
+#wrap form[name^=login] fieldset[class*=g] input[name^=user]:nth-child(3) {margin: 0;}
+#wrap form[name^=login] fieldset[class*=g] input[name^=user]::placeholder {
+    font-size: 0.875em;
+    color: #aaa;
+}
+#wrap main form[name^=login] fieldset[class*=g] button[id*=login] {
+        background-color: #1ED760;
+    width: 420px; height: 46px;
+    border-radius: 23px;
+    font-family: 'Noto Sans KR';
+    color: #fff;
+    font-size: 1em; font-weight: 500;
+}
+#wrap form .btn_search_g #login_btn {
+/*     background-color: #1ED760;
+    width: 420px; height: 46px;
+    border-radius: 23px;
+    font-family: 'Noto Sans KR';
+    color: #fff;
+    font-size: 1em; font-weight: 500; */
 }
