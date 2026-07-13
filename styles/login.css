@@ -92,18 +92,39 @@ body {background-color: #222;}
     color: #aaa;
 }
 #wrap main form[name^=login] fieldset[class*=g] button[id*=login] {
-        background-color: #1ED760;
+    background-color: #1ED760;
     width: 420px; height: 46px;
     border-radius: 23px;
     font-family: 'Noto Sans KR';
     color: #fff;
     font-size: 1em; font-weight: 500;
 }
-#wrap form .btn_search_g #login_btn {
+#wrap main form .btn_search_g #login_btn {
 /*     background-color: #1ED760;
     width: 420px; height: 46px;
     border-radius: 23px;
     font-family: 'Noto Sans KR';
     color: #fff;
     font-size: 1em; font-weight: 500; */
+}
+/* 로그인상태유지 디자인 */
+#wrap main form[name^=login] .login_y_g {
+    background-color: purple; /* 코드에 확신이 없을 수록 꼭 배경을 줘서 확인하기 */
+    display: flex;
+    flex-flow: row nowrap !important;
+}
+#wrap main form[name^=login] .login_y_g #login_state_y {/* checkbox */
+    /* input:checkbox와 radio, select, option은 css 디자인 불가능 */
+    /* 다양한 디자인을 하기 위해선 배경이미지로 대체해서 보여줘야함. */
+    display: none;
+}
+/* 체크박스의 상태가 체크되면 옆 라벨의 배경이미지를 on상태로 변경 */
+#wrap main form[name^=login] .login_y_g #login_state_y:checked + label {
+    background-image: url(../images/check_on.svg);
+}
+#wrap main form[name^=login] .login_y_g label {
+    color: #fff;
+    background-image: url(../images/check_off.svg);
+    background-repeat: no-repeat;
+    padding-left: 30px;
 }
